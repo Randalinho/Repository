@@ -2,10 +2,25 @@ package de.hdm.itprojekt.shared;
 
 public class Lehrveranstaltung extends BusinessObjekt{
 	
-	private String bezeichnung;
-	private String edvNummer;
-	private int semester;
-	private int umfang;
+	/**
+	 * Bezeichnung der Lehrveranstaltung
+	 */
+		private String bezeichnung;
+		
+	/**
+	 * EDV Nummer der Lehrveranstaltung
+	 */
+		private String edvNummer;
+		
+	/**
+	 * ECTS-Anzahl der Lehrveranstaltung
+	 */
+		private int ects;
+		
+	/**
+	 * SWS der Lehrveranstaltung
+	 */
+		private int sws;
 	
 	public void setBezeichnung(String bezeichnung){
 		this.bezeichnung = bezeichnung;
@@ -15,12 +30,12 @@ public class Lehrveranstaltung extends BusinessObjekt{
 		this.edvNummer = edvNummer;
 	}
 	
-	public void setSemester(int semester){
-		this.semester = semester;
+	public void setSemester(int sws){
+		this.sws = sws;
 	}
 	
-	public void setUmfang(int umfang){
-		this.umfang = umfang;
+	public void setUmfang(int ects){
+		this.ects = umfang;
 	}
 	
 	public String getBezeichnung(){
@@ -32,11 +47,11 @@ public class Lehrveranstaltung extends BusinessObjekt{
 	}
 
 	public int getSemester(){
-		return this.semester;
+		return this.sws;
 	}
 	
 	public int getUmfang(){
-		return this.umfang;
+		return this.ects;
 	}
 	
 	@Override

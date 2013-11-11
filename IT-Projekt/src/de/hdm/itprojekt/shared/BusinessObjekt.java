@@ -1,6 +1,6 @@
 package de.hdm.itprojekt.shared;
 
-//author:thies 
+//author:thies & holz
 
 public class BusinessObjekt {
 	
