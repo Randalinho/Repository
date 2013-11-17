@@ -1,10 +1,6 @@
-package de.hdm.itprojekt.shared;
+package de.hdm.itprojekt.shared.bo;
 
 public class Raum {
-	/**
-	 * ID des Raumes
-	 */
-		private int raumId;
 		
 	/**
 	 * Bezeichnung des Raumes
@@ -12,17 +8,9 @@ public class Raum {
 		private String name;
 		
 	/**
-	 * Kapazität des Raumes;
+	 * Kapazit?t des Raumes;
 	 */
 		private int kapazitaet;
-
-	public int getRaumId() {
-		return raumId;
-	}
-
-	public void setRaumId(int raumId) {
-		this.raumId = raumId;
-	}
 
 	public String getName() {
 		return name;
@@ -39,6 +27,7 @@ public class Raum {
 	public void setKapazitaet(int kapazitaet) {
 		this.kapazitaet = kapazitaet;
 	}
-		
-
+	
+	
+	
 }

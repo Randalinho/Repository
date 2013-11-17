@@ -1,4 +1,4 @@
-package de.hdm.itprojekt.shared;
+package de.hdm.itprojekt.shared.bo;
 
 //author:thies & holz
 
