@@ -1,6 +1,6 @@
 package de.hdm.itprojekt.shared.bo;
 
-public class Dozent {
+public class Dozent extends BusinessObjekt {
 	
 /**
  * Vorname des Dozenten

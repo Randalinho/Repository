@@ -1,6 +1,6 @@
 package de.hdm.itprojekt.shared.bo;
 
-public class Semsterverband extends BusinessObjekt {
+public class Semesterverband extends BusinessObjekt {
 	
 	/**
 	 * Name des Studiengangs

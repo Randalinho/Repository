@@ -1,6 +1,6 @@
 package de.hdm.itprojekt.shared.bo;
 
-public class Raum {
+public class Raum extends BusinessObjekt {
 		
 	/**
 	 * Bezeichnung des Raumes
