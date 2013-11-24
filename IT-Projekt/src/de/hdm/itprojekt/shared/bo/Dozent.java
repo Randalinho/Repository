@@ -11,6 +11,11 @@ public class Dozent extends BusinessObjekt {
  * Nachname des Dozenten
  */
 	private String nachname;
+	
+/**
+ * E-Mail Adresse des Dozenten
+ */
+	private String email;
 
 public String getVorname() {
 	return vorname;
@@ -26,6 +31,14 @@ public String getNachname() {
 
 public void setNachname(String nachname) {
 	this.nachname = nachname;
+}
+
+public String getEmail() {
+	return email;
+}
+
+public void setEmail(String email) {
+	this.email = email;
 }
 	
 	

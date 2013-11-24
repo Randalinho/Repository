@@ -9,11 +9,12 @@ public class VerwaltungsklasseImpl extends RemoteServiceServlet
 implements Verwaltungsklasse {
 	
 	@Override		
-	public Dozent createDozent(String vorname, String nachname)
+	public Dozent createDozent(String vorname, String nachname, String email)
 			throws IllegalArgumentException {
 		Dozent a = new Dozent();
 		a.setVorname(vorname);
 		a.setNachname(nachname);
+		a.setEmail(email);
 		
 		a.setId(1);
 		

@@ -6,7 +6,7 @@ import de.hdm.itprojekt.shared.bo.*;
 
 public interface VerwaltungsklasseAsync {
 
-	void createDozent(String vorname, String nachname,
+	void createDozent(String vorname, String nachname, String email,
 			AsyncCallback<Dozent> callback);
 
 	void createLehrveranstaltung(String bezeichnung, int semester, int umfang,

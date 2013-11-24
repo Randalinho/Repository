@@ -6,7 +6,7 @@ import de.hdm.itprojekt.shared.bo.*;
 
 public interface Verwaltungsklasse extends RemoteService {
 	
-	public Dozent createDozent(String vorname, String nachname)
+	public Dozent createDozent(String vorname, String nachname, String email)
 		throws IllegalArgumentException;
 	
 	public Lehrveranstaltung createLehrveranstaltung(String bezeichnung, int semester, int umfang)
