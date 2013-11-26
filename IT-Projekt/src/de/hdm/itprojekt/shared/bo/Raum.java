@@ -5,19 +5,19 @@ public class Raum extends BusinessObjekt {
 	/**
 	 * Bezeichnung des Raumes
 	 */
-		private String name;
+		private String bezeichung;
 		
 	/**
 	 * Kapazit?t des Raumes;
 	 */
 		private int kapazitaet;
 
-	public String getName() {
-		return name;
+	public String getBezeichnung() {
+		return bezeichung;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setBezeichnung(String name) {
+		this.bezeichung = name;
 	}
 
 	public int getKapazitaet() {
