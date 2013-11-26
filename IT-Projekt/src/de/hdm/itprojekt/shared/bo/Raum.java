@@ -13,6 +13,9 @@ public class Raum extends BusinessObjekt {
 	 * Kapazit?t des Raumes;
 	 */
 		private int kapazitaet;
+		
+	public Raum(){
+	}
 
 	public String getBezeichnung() {
 		return bezeichung;

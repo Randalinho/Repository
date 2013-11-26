@@ -18,6 +18,9 @@ public class Lehrveranstaltung extends BusinessObjekt{
 	 * ECTS-Anzahl der Lehrveranstaltung
 	 */
 		private int umfang;
+		
+	public Lehrveranstaltung(){
+	}
 	
 	public void setBezeichnung(String bezeichnung){
 		this.bezeichnung = bezeichnung;

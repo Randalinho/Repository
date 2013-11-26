@@ -1,8 +1,13 @@
 package de.hdm.itprojekt.shared.bo;
 
-public class Studiengang {
+public class Studiengang extends BusinessObjekt {
+	
+	private static final long serialVersionUID = 1L;
 	
 	private String bezeichnung;
+	
+	public Studiengang(){
+	}
 
 	public String getBezeichnung() {
 		return bezeichnung;

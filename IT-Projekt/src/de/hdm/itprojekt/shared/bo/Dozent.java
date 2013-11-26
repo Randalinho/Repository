@@ -18,6 +18,9 @@ public class Dozent extends BusinessObjekt {
  * E-Mail Adresse des Dozenten
  */
 	private String email;
+	
+public Dozent(){	
+}	
 
 public String getVorname() {
 	return vorname;

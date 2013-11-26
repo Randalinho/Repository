@@ -24,6 +24,9 @@ public class Semesterverband extends BusinessObjekt {
 	 * Semesterjahrgang des Erstsemsters
 	 */
 	private String jahrgang;
+	
+	public Semesterverband(){
+	}
 
 	public int getSemester() {
 		return semester;
