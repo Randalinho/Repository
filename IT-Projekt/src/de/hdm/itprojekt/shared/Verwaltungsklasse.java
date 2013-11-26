@@ -31,7 +31,7 @@ public interface Verwaltungsklasse extends RemoteService {
 	public Raum createRaum(String bezeichnung, int kapazitaet)
 			throws IllegalArgumentException;
 	
-	public Semesterverband createSemesterverband(Studiengang bezeichnung, int semester, int studierendenAnzahl)
+	public Semesterverband createSemesterverband(Studiengang bezeichnung, int semester, int studierendenAnzahl, String jahrgang)
 			throws IllegalArgumentException;
 	
 	public Zeitslot deleteZeitslot(Zeitslot z)
@@ -41,15 +41,19 @@ public interface Verwaltungsklasse extends RemoteService {
 			throws IllegalArgumentException;
 	
 	public Stundenplaneintrag deleteStundenplaneintrag(Stundenplaneintrag s)
-					throws IllegalArgumentException;
+			throws IllegalArgumentException;
 	
-	public Dozent deleteDozent(Dozent a) throws IllegalArgumentException;
+	public Dozent deleteDozent(Dozent a) 
+			throws IllegalArgumentException;
 	
-	public Lehrveranstaltung deleteLehrveranstaltung(Lehrveranstaltung a) throws IllegalArgumentException;
+	public Lehrveranstaltung deleteLehrveranstaltung(Lehrveranstaltung a) 
+			throws IllegalArgumentException;
 	
-	public Raum deleteRaum(Raum a) throws IllegalArgumentException;
+	public Raum deleteRaum(Raum a) 
+			throws IllegalArgumentException;
 	
-	public Semesterverband deleteSemesterverband(Semesterverband a) throws IllegalArgumentException;
+	public Semesterverband deleteSemesterverband(Semesterverband a) 
+			throws IllegalArgumentException;
 	
 	public Studiengang changeStudiengang(String bezeichnung)
 			throws IllegalArgumentException;
@@ -59,7 +63,7 @@ public interface Verwaltungsklasse extends RemoteService {
 	
 	public Stundenplaneintrag changeStundenplaneintrag(Dozent d, Lehrveranstaltung l, Raum r, 
 			Zeitslot z, Semesterverband sv, Studiengang st)
-					throws IllegalArgumentException;
+			throws IllegalArgumentException;
 	
 	public Dozent changeDozent(String vorname, String nachname, String email)
 			throws IllegalArgumentException;
@@ -70,7 +74,7 @@ public interface Verwaltungsklasse extends RemoteService {
 	public Raum changeRaum(String bezeichnung, int kapazitaet)
 			throws IllegalArgumentException;
 	
-	public Semesterverband changeSemsterverband(Studiengang bezeichnung, int semester, int studierendenAnzahl)
+	public Semesterverband changeSemsterverband(Studiengang bezeichnung, int semester, int studierendenAnzahl, String semesterverband)
 			throws IllegalArgumentException;
 }
 

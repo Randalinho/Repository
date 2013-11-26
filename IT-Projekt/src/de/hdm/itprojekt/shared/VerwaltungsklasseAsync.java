@@ -19,7 +19,8 @@ public interface VerwaltungsklasseAsync {
 	void createRaum(String bezeichnung, int kapazitaet, AsyncCallback<Raum> callback);
 	
 	void createSemesterverband(Studiengang bezeichnung, int semester,
-			int studierendenAnzahl, AsyncCallback<Semesterverband> callback);
+			int studierendenAnzahl, String jahrgang,
+			AsyncCallback<Semesterverband> callback);
 
 	void createStudiengang(String bezeichnung,
 	AsyncCallback<Studiengang> callback);
@@ -60,7 +61,8 @@ public interface VerwaltungsklasseAsync {
 			AsyncCallback<Studiengang> callback);
 
 	void changeSemsterverband(Studiengang bezeichnung, int semester,
-			int studierendenAnzahl, AsyncCallback<Semesterverband> callback);
+			int studierendenAnzahl, String semesterverband,
+			AsyncCallback<Semesterverband> callback);
 
 	void createZeitslot(Date wochentag, Date anfangszeit, Date endzeit,
 			AsyncCallback<Zeitslot> callback);
