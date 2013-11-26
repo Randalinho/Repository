@@ -1,11 +1,14 @@
 package de.hdm.itprojekt.shared.bo;
 
 public class Semesterverband extends BusinessObjekt {
-	
+
+	private static final long serialVersionUID = 1L;
+
 	/**
-	 * Name des Studiengangs
+	 * Bezeichnung des jeweiligen Semesterverbands
 	 */
-	private String studiengang;
+	
+	private Studiengang bezeichnung;
 	
 	/**
 	 * Semesterstufe
@@ -21,14 +24,6 @@ public class Semesterverband extends BusinessObjekt {
 	 * Semesterjahrgang des Erstsemsters
 	 */
 	private String jahrgang;
-	
-	public String getStudiengang() {
-		return studiengang;
-	}
-
-	public void setStudiengang(String studiengang) {
-		this.studiengang = studiengang;
-	}
 
 	public int getSemester() {
 		return semester;
@@ -54,8 +49,12 @@ public class Semesterverband extends BusinessObjekt {
 		this.jahrgang = jahrgang;
 	}
 
-	public String toString(){
-		return semester +". Semester "+this.studiengang;
+	public Studiengang getBezeichnung() {
+		return bezeichnung;
+	}
+
+	public void setBezeichnung(Studiengang bezeichnung) {
+		this.bezeichnung = bezeichnung;
 	}
 	
 }

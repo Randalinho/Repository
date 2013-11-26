@@ -2,6 +2,8 @@ package de.hdm.itprojekt.shared.bo;
 
 public class Lehrveranstaltung extends BusinessObjekt{
 	
+	private static final long serialVersionUID = 1L;
+	
 	/**
 	 * Bezeichnung der Lehrveranstaltung
 	 */

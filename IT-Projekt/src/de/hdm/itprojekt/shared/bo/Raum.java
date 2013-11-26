@@ -1,6 +1,8 @@
 package de.hdm.itprojekt.shared.bo;
 
 public class Raum extends BusinessObjekt {
+	
+	private static final long serialVersionUID = 1L;
 		
 	/**
 	 * Bezeichnung des Raumes

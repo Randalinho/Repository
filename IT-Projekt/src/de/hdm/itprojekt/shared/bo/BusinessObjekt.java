@@ -1,8 +1,12 @@
 package de.hdm.itprojekt.shared.bo;
 
+import java.io.Serializable;
+
 //author:thies & holz
 
-public class BusinessObjekt {
+public class BusinessObjekt implements Serializable {
+	
+	private static final long serialVersionUID = 1L;
 	
 	private int id;
 	

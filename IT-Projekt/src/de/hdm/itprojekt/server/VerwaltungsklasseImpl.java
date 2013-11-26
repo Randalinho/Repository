@@ -7,7 +7,7 @@ import de.hdm.itprojekt.shared.bo.*;
 
 public class VerwaltungsklasseImpl extends RemoteServiceServlet 
 implements Verwaltungsklasse {
-	
+
 	@Override		
 	public Dozent createDozent(String vorname, String nachname, String email)
 			throws IllegalArgumentException {
@@ -62,6 +62,61 @@ implements Verwaltungsklasse {
 		a.setId(1);
 		
 		//Objekt abspeichern in die Datenbank, hier muss man den jeweiligen Mapper returnen
+		return null;
+	}
+
+	@Override
+	public Dozent deleteDozent(Dozent a) throws IllegalArgumentException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Lehrveranstaltung deleteLehrveranstaltung(Lehrveranstaltung a)
+			throws IllegalArgumentException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Raum deleteRaum(Raum a) throws IllegalArgumentException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Semesterverband deleteSemesterverband(Semesterverband a)
+			throws IllegalArgumentException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Dozent changeDozent(String vorname, String nachname, String email)
+			throws IllegalArgumentException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Lehrveranstaltung changeLehrveranstaltung(String bezeichnung,
+			int semester, int umfang) throws IllegalArgumentException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Raum changeRaum(String name, int kapazitaet)
+			throws IllegalArgumentException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Semesterverband changeSemsterverband(String studiengang,
+			int semester, int studierendenAnzahl)
+			throws IllegalArgumentException {
+		// TODO Auto-generated method stub
 		return null;
 	}
 
