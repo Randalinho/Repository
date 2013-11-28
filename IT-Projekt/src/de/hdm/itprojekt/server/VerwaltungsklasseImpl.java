@@ -18,7 +18,6 @@ implements Verwaltungsklasse {
 	 */
 	private static final long serialVersionUID = 7027992284251455305L;
 
-	@Override		
 	public Dozent createDozent(String vorname, String nachname, String email)
 			throws IllegalArgumentException {
 		Dozent a = new Dozent();
@@ -60,7 +59,6 @@ implements Verwaltungsklasse {
 		return null;
 	}
 	
-	@Override
 	public Semesterverband createSemesterverband(Studiengang bezeichnung,
 			int semester, int studierendenAnzahl)
 			throws IllegalArgumentException {
@@ -91,8 +89,8 @@ implements Verwaltungsklasse {
 
 	@Override
 	public Stundenplaneintrag createStundenplaneintrag(Dozent d,
-			Lehrveranstaltung l, Raum r, Zeitslot z, Semesterverband sv,
-			Studiengang st) throws IllegalArgumentException {
+			Lehrveranstaltung l, Raum r, Zeitslot z, Semesterverband sv) 
+					throws IllegalArgumentException {
 		
 		Stundenplaneintrag s = new Stundenplaneintrag();
 		
@@ -101,7 +99,6 @@ implements Verwaltungsklasse {
 		s.setRaumId(r.getId());
 		s.setZeitslotId(z.getId());
 		s.setSemesterverbandId(sv.getId());
-		s.setStudiengangId(st.getId());
 		
 		s.setId(1);
 		

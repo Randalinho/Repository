@@ -26,8 +26,8 @@ public interface VerwaltungsklasseAsync {
 	AsyncCallback<Studiengang> callback);
 
 	void createStundenplaneintrag(Dozent d, Lehrveranstaltung l, Raum r,
-	Zeitslot z, Semesterverband sv, Studiengang st,
-	AsyncCallback<Stundenplaneintrag> callback);
+			Zeitslot z, Semesterverband sv,
+			AsyncCallback<Stundenplaneintrag> callback);
 
 	void deleteDozent(Dozent a, AsyncCallback<Dozent> callback);
 
@@ -54,7 +54,7 @@ public interface VerwaltungsklasseAsync {
 	void changeRaum(String bezeichnung, int kapazitaet, AsyncCallback<Raum> callback);
 
 	void changeStundenplaneintrag(Dozent d, Lehrveranstaltung l, Raum r,
-			Zeitslot z, Semesterverband sv, Studiengang st,
+			Zeitslot z, Semesterverband sv,
 			AsyncCallback<Stundenplaneintrag> callback);
 
 	void changeStudiengang(String bezeichnung,

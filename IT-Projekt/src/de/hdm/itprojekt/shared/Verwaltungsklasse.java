@@ -16,7 +16,7 @@ public interface Verwaltungsklasse extends RemoteService {
 			throws IllegalArgumentException;
 	
 	public Stundenplaneintrag createStundenplaneintrag(Dozent d, Lehrveranstaltung l, Raum r, 
-			Zeitslot z, Semesterverband sv, Studiengang st)
+			Zeitslot z, Semesterverband sv)
 					throws IllegalArgumentException;
 	
 	public Dozent createDozent(String vorname, String nachname, String email)
@@ -62,7 +62,7 @@ public interface Verwaltungsklasse extends RemoteService {
 			throws IllegalArgumentException;
 	
 	public Stundenplaneintrag changeStundenplaneintrag(Dozent d, Lehrveranstaltung l, Raum r, 
-			Zeitslot z, Semesterverband sv, Studiengang st)
+			Zeitslot z, Semesterverband sv)
 			throws IllegalArgumentException;
 	
 	public Dozent changeDozent(String vorname, String nachname, String email)
