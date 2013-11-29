@@ -20,7 +20,7 @@ import com.google.gwt.user.client.ui.VerticalPanel;
 public class DozentForm extends VerticalPanel{
 
 	/**
-	 * 
+	 * TEst test test
 	 */
 	public DozentForm() {
 		// TODO Auto-generated constructor stub
