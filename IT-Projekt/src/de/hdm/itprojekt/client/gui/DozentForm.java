@@ -25,8 +25,6 @@ import de.hdm.itprojekt.shared.Verwaltungsklasse;
 
 
 
-
-
 /**
  * @author Thies & Hofmann
  *
