@@ -26,7 +26,7 @@ import de.hdm.itprojekt.shared.Verwaltungsklasse;
 
 
 /**
- * @author Thies & Hofmann
+ * @author Thies, Hofmann
  *
  */
 public class DozentForm extends HorizontalPanel{
@@ -75,14 +75,9 @@ public class DozentForm extends HorizontalPanel{
 		tabelleDozent.setText(0, 1, "vorname");
 		tabelleDozent.setWidget(1, 2, loeschen);
 		tabelleDozent.setWidget(1, 2, bearbeiten);
-		
-
-
-
-		
-
-		
-		
+		tabelleDozent.setWidget(1, 1, nachnameTextBox);
+		tabelleDozent.setWidget(1, 2, vornameTextBox);
+				
 		
 		
 
