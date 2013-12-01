@@ -4,6 +4,7 @@
 package de.hdm.itprojekt.client.gui;
 
 import java.util.HashMap;
+
 import java.util.Map;
 
 import com.google.gwt.view.client.ListDataProvider;
@@ -41,7 +42,7 @@ public class UebersichtTreeViewModel implements TreeViewModel{
 	
 	VerwaltungsklasseAsync verwaltungsklasse = ClientsideSettings
 			.getVerwaltungsklasse();
-	private ListDataProvider<String> dataProvider;
+	private ListDataProvider<BusinessObjekt> boDataProvider;
 	private Map<BusinessObjekt, ListDataProvider<Dozent>> dozentDataProviders = new HashMap<BusinessObjekt, ListDataProvider<Dozent>>();
 	private Map<BusinessObjekt, ListDataProvider<Zeitslot>> zeitslotDataProviders = new HashMap<BusinessObjekt, ListDataProvider<Zeitslot>>();
 	private Map<BusinessObjekt, ListDataProvider<Raum>> raumDataProviders = new HashMap<BusinessObjekt, ListDataProvider<Raum>>();
@@ -56,9 +57,15 @@ public class UebersichtTreeViewModel implements TreeViewModel{
 	//private Map<Report, ListDataProvider<Raumplan>> raumplanDataProviders = new HashMap<Report, ListDataProvider<Raumplan>>();
 	
 	
-	// public <T> NodeInfo<?> getNodeInfo(T value) {
+	public <T> NodeInfo<?> getNodeInfo(T value) {
 		
-	// }
+		if (value instanceof String) {
+			// Erzeugen eines ListDataProviders für BusinessObjekte
+			boDataProvider = new ListDataProvider<BusinessObjekt>();
+			verwaltungsklasse.getAllBusinessObjekt
+		}
+		
+	}
 	
 	
 	

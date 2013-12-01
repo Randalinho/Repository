@@ -32,7 +32,7 @@ import de.hdm.itprojekt.shared.Verwaltungsklasse;
 public class DozentForm extends HorizontalPanel{
 
 	/**
-	 * Aufbau der Seite, um den Dozent anzuzeigen, zu loeschen und zu bearbeiten
+	 * Aufbau der Seite, um den Dozent anzuzeigen, zu löschen und zu bearbeiten
 	 */
 	
 	TextBox nachnameTextBox = new TextBox();
