@@ -24,7 +24,7 @@ import de.hdm.itprojekt.shared.bo.Dozent;
 import de.hdm.itprojekt.shared.Verwaltungsklasse;
 
 
-
+//Test
 /**
  * @author Thies, Hofmann
  *
