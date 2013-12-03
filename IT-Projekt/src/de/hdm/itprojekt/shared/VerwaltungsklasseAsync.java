@@ -29,21 +29,24 @@ public interface VerwaltungsklasseAsync {
 			Zeitslot z, Semesterverband sv,
 			AsyncCallback<Stundenplaneintrag> callback);
 
-	void deleteDozent(Dozent a, AsyncCallback<Dozent> callback);
+	void createZeitslot(Date wochentag, Date anfangszeit, Date endzeit,
+	AsyncCallback<Zeitslot> callback);
 
-	void deleteLehrveranstaltung(Lehrveranstaltung a,
-			AsyncCallback<Lehrveranstaltung> callback);
+	void deleteDozent(Dozent d, AsyncCallback<Void> callback);
 
-	void deleteRaum(Raum a, AsyncCallback<Raum> callback);
+	void deleteLehrveranstaltung(Lehrveranstaltung l,
+			AsyncCallback<Void> callback);
 
-	void deleteSemesterverband(Semesterverband a,
-			AsyncCallback<Semesterverband> callback);
+	void deleteRaum(Raum r, AsyncCallback<Void> callback);
+
+	void deleteZeitslot(Zeitslot z, AsyncCallback<Void> callback);
+
+	void deleteSemesterverband(Semesterverband sv, AsyncCallback<Void> callback);
 
 	void deleteStundenplaneintrag(Stundenplaneintrag s,
-	AsyncCallback<Stundenplaneintrag> callback);
+			AsyncCallback<Void> callback);
 
-	void deleteStudiengang(Studiengang studiengang,
-	AsyncCallback<Studiengang> callback);
+	void deleteStudiengang(Studiengang sg, AsyncCallback<Void> callback);
 
 	void changeDozent(Dozent d, AsyncCallback<Dozent> callback);
 
@@ -55,19 +58,10 @@ public interface VerwaltungsklasseAsync {
 	void changeStundenplaneintrag(Stundenplaneintrag s,
 			AsyncCallback<Stundenplaneintrag> callback);
 
-	void changeStudiengang(String bezeichnung,
-			AsyncCallback<Studiengang> callback);
+	void changeStudiengang(Studiengang s, AsyncCallback<Studiengang> callback);
 
 	void changeSemsterverband(Semesterverband sv,
 			AsyncCallback<Semesterverband> callback);
 
-	void createZeitslot(Date wochentag, Date anfangszeit, Date endzeit,
-			AsyncCallback<Zeitslot> callback);
-
-	void deleteZeitslot(Zeitslot z, AsyncCallback<Zeitslot> callback);
-
-	void changeZeitslot(Date wochentag, Date anfangszeit, Date endzeit,
-			AsyncCallback<Zeitslot> callback);
-
-
+	void changeZeitslot(Zeitslot z, AsyncCallback<Zeitslot> callback);
 }

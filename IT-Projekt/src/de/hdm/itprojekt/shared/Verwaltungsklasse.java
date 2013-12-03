@@ -34,31 +34,31 @@ public interface Verwaltungsklasse extends RemoteService {
 	public Semesterverband createSemesterverband(Studiengang bezeichnung, int semester, int studierendenAnzahl, String jahrgang)
 			throws IllegalArgumentException;
 	
-	public Zeitslot deleteZeitslot(Zeitslot z)
+	public void deleteZeitslot(Zeitslot z)
 			throws IllegalArgumentException;
 	
-	public Studiengang deleteStudiengang(Studiengang sg)
+	public void deleteStudiengang(Studiengang sg)
 			throws IllegalArgumentException;
 	
-	public Stundenplaneintrag deleteStundenplaneintrag(Stundenplaneintrag s)
+	public void deleteStundenplaneintrag(Stundenplaneintrag s)
 			throws IllegalArgumentException;
 	
-	public Dozent deleteDozent(Dozent d) 
+	public void deleteDozent(Dozent d) 
 			throws IllegalArgumentException;
 	
-	public Lehrveranstaltung deleteLehrveranstaltung(Lehrveranstaltung l) 
+	public void deleteLehrveranstaltung(Lehrveranstaltung l) 
 			throws IllegalArgumentException;
 	
-	public Raum deleteRaum(Raum r) 
+	public void deleteRaum(Raum r) 
 			throws IllegalArgumentException;
 	
-	public Semesterverband deleteSemesterverband(Semesterverband sv) 
+	public void deleteSemesterverband(Semesterverband sv) 
 			throws IllegalArgumentException;
 	
-	public Studiengang changeStudiengang(String bezeichnung)
+	public Studiengang changeStudiengang(Studiengang s)
 			throws IllegalArgumentException;
 	
-	public Zeitslot changeZeitslot(Date wochentag, Date anfangszeit, Date endzeit)
+	public Zeitslot changeZeitslot(Zeitslot z)
 			throws IllegalArgumentException;
 	
 	public Stundenplaneintrag changeStundenplaneintrag(Stundenplaneintrag s)
