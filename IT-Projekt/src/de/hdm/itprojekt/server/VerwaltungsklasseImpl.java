@@ -9,6 +9,7 @@ import de.hdm.itprojekt.server.db.StundenplaneintragMapper;
 import de.hdm.itprojekt.shared.*;
 import de.hdm.itprojekt.shared.bo.*;
 import de.hdm.thies.bankProjekt.shared.bo.Account;
+import de.hdm.thies.bankProjekt.shared.bo.Customer;
 
 public class VerwaltungsklasseImpl extends RemoteServiceServlet 
 implements Verwaltungsklasse {
@@ -123,20 +124,23 @@ implements Verwaltungsklasse {
 	}
 
 	@Override
-	public Dozent deleteDozent(Dozent a) throws IllegalArgumentException {
+	public Dozent deleteDozent(Dozent d) throws IllegalArgumentException {
 		
-		 Vector<Account> accounts = this.getAccountsOf(c);
+		 Vector<Dozent> dozenten = this.getStundenplaneintragOf(d);
 
-		    if (accounts != null) {
-		      for (Account a : accounts) {
-		        this.delete(a);
-		      }
+		    if (dozenten != null) {
+		    	//Bildschirmmeldung: Dozent kann nicht geloescht werden, da noch Stundenplaneinträge
+		    } else {
+		    	this.delete(d);
 		    }
-		
-		if ( == a.getId())
 		//Objekt abspeichern in die Datenbank, hier muss man den jeweiligen Mapper returnen
 		return null;
 	}
+	
+	 public Vector<Dozenten> getStundenplaneintragOf(Dozenten d)
+		      throws IllegalArgumentException {
+		    //return this.DozentenMapper.findByOwner(d);
+		  }
 
 	@Override
 	public Lehrveranstaltung deleteLehrveranstaltung(Lehrveranstaltung a)
