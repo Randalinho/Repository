@@ -45,23 +45,20 @@ public interface VerwaltungsklasseAsync {
 	void deleteStudiengang(Studiengang studiengang,
 	AsyncCallback<Studiengang> callback);
 
-	void changeDozent(String vorname, String nachname, String email,
-			AsyncCallback<Dozent> callback);
+	void changeDozent(Dozent d, AsyncCallback<Dozent> callback);
 
-	void changeLehrveranstaltung(String bezeichnung, int semester, int umfang,
+	void changeLehrveranstaltung(Lehrveranstaltung l,
 			AsyncCallback<Lehrveranstaltung> callback);
 
-	void changeRaum(String bezeichnung, int kapazitaet, AsyncCallback<Raum> callback);
+	void changeRaum(Raum r, AsyncCallback<Raum> callback);
 
-	void changeStundenplaneintrag(Dozent d, Lehrveranstaltung l, Raum r,
-			Zeitslot z, Semesterverband sv,
+	void changeStundenplaneintrag(Stundenplaneintrag s,
 			AsyncCallback<Stundenplaneintrag> callback);
 
 	void changeStudiengang(String bezeichnung,
 			AsyncCallback<Studiengang> callback);
 
-	void changeSemsterverband(Studiengang bezeichnung, int semester,
-			int studierendenAnzahl, String semesterverband,
+	void changeSemsterverband(Semesterverband sv,
 			AsyncCallback<Semesterverband> callback);
 
 	void createZeitslot(Date wochentag, Date anfangszeit, Date endzeit,

@@ -37,22 +37,22 @@ public interface Verwaltungsklasse extends RemoteService {
 	public Zeitslot deleteZeitslot(Zeitslot z)
 			throws IllegalArgumentException;
 	
-	public Studiengang deleteStudiengang(Studiengang studiengang)
+	public Studiengang deleteStudiengang(Studiengang sg)
 			throws IllegalArgumentException;
 	
 	public Stundenplaneintrag deleteStundenplaneintrag(Stundenplaneintrag s)
 			throws IllegalArgumentException;
 	
-	public Dozent deleteDozent(Dozent a) 
+	public Dozent deleteDozent(Dozent d) 
 			throws IllegalArgumentException;
 	
-	public Lehrveranstaltung deleteLehrveranstaltung(Lehrveranstaltung a) 
+	public Lehrveranstaltung deleteLehrveranstaltung(Lehrveranstaltung l) 
 			throws IllegalArgumentException;
 	
-	public Raum deleteRaum(Raum a) 
+	public Raum deleteRaum(Raum r) 
 			throws IllegalArgumentException;
 	
-	public Semesterverband deleteSemesterverband(Semesterverband a) 
+	public Semesterverband deleteSemesterverband(Semesterverband sv) 
 			throws IllegalArgumentException;
 	
 	public Studiengang changeStudiengang(String bezeichnung)
@@ -61,20 +61,19 @@ public interface Verwaltungsklasse extends RemoteService {
 	public Zeitslot changeZeitslot(Date wochentag, Date anfangszeit, Date endzeit)
 			throws IllegalArgumentException;
 	
-	public Stundenplaneintrag changeStundenplaneintrag(Dozent d, Lehrveranstaltung l, Raum r, 
-			Zeitslot z, Semesterverband sv)
+	public Stundenplaneintrag changeStundenplaneintrag(Stundenplaneintrag s)
 			throws IllegalArgumentException;
 	
-	public Dozent changeDozent(String vorname, String nachname, String email)
+	public Dozent changeDozent(Dozent d)
 			throws IllegalArgumentException;
 	
-	public Lehrveranstaltung changeLehrveranstaltung(String bezeichnung, int semester, int umfang)
+	public Lehrveranstaltung changeLehrveranstaltung(Lehrveranstaltung l)
 			throws IllegalArgumentException;
 	
-	public Raum changeRaum(String bezeichnung, int kapazitaet)
+	public Raum changeRaum(Raum r)
 			throws IllegalArgumentException;
 	
-	public Semesterverband changeSemsterverband(Studiengang bezeichnung, int semester, int studierendenAnzahl, String semesterverband)
+	public Semesterverband changeSemsterverband(Semesterverband sv)
 			throws IllegalArgumentException;
 }
 
