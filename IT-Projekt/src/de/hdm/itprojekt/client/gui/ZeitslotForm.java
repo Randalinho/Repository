@@ -3,11 +3,13 @@
  */
 package de.hdm.itprojekt.client.gui;
 
+import com.google.gwt.user.client.ui.SplitLayoutPanel;
+
 /**
  * @author christianwagner
  *
  */
-public class ZeitslotForm {
+public class ZeitslotForm extends SplitLayoutPanel {
 
 	/**
 	 * 

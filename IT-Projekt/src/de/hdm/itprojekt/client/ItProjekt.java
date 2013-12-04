@@ -30,7 +30,6 @@ import com.google.gwt.user.client.ui.VerticalPanel;
 import de.hdm.itprojekt.client.gui.*;
 
 
-
 /**
  * EntryPoint Klasse des Projekts <b>IT-Projekt</b>
  * Diese Klasse implementiert das Interface <code>EntryPoint</code>
@@ -45,7 +44,7 @@ public class ItProjekt implements EntryPoint {
 	}
 	
 	public void onModuleLoad() {
-		
+			
 		/*
 		 * Die Anwendung besteht aus zwei seperaten horizontalen Panels. Im rechten Panel wird ein Navigationsteil 
 		 * mit Baumstruktur der Stamm,- und Bewegunsdaten, sowie des Reports realisiert.
@@ -53,18 +52,34 @@ public class ItProjekt implements EntryPoint {
 	     * Daher bietet sich ein SplitLayoutPanel als Container an.
 	     *
 	     */
-
-		SplitLayoutPanel s = new SplitLayoutPanel();
-		s.addWest (new HTML ("navigation"), 130);
-		SplitLayoutPanel p = new SplitLayoutPanel();
-		p.addEast (new HTML("content"), 380);
+		
+		RootLayoutPanel rlp = RootLayoutPanel.get();
+		SplitLayoutPanel mainPanel = new SplitLayoutPanel();
+		rlp.add(mainPanel);
+		
+		VerticalPanel detailsPanel = new VerticalPanel();	
+		
+		ScrollPanel navigation = new ScrollPanel(new Tree());
+		navigation.setHeight("300px");
+		
+		mainPanel.addWest(navigation, 150);
+		mainPanel.addEast(detailsPanel, 350);
+		
+		RootPanel.get("ItProjektFrame").add(rlp);
+	
+	/**
+	 * 	SplitLayoutPanel s = new SplitLayoutPanel();
+	 *	s.addWest (new HTML ("navigation"), 130);
+	 *	SplitLayoutPanel p = new SplitLayoutPanel();
+	 *	p.addEast (new HTML("content"), 380);
+	 *	RootPanel.get("details").add(s);
+	    RootPanel.get("details").add(p);
+		 */
 
 	    /*
 	     * Das SplitLayoutPanel wird einem DIV-Element namens "Details" in der
 	     * zugehörigen HTML-Datei zugewiesen und erhält so seinen Darstellungsort.
 	     */
-	    RootPanel.get("details").add(s);
-	    RootPanel.get("details").add(p);
 	    
 	    /*
 	     * Ab hier bauen wir sukzessive den Navigator mit seinen Buttons aus.
@@ -92,7 +107,6 @@ public class ItProjekt implements EntryPoint {
 	    stundenplaneintragButton.setStylePrimaryName("BaumButton");
 	    stundenplanButton.setStylePrimaryName("BaumButton");
 	    raumplanButton.setStylePrimaryName("BaumButton");
-
 	    
 	    Tree uebersicht = new Tree();
 		
@@ -104,21 +118,19 @@ public class ItProjekt implements EntryPoint {
 		stundenplanButton.addClickHandler(new ClickHandler() {
 			public void onClick(ClickEvent event) {
 				StundenplanForm spf = new StundenplanForm();
-				RootPanel.get("details").clear();
-				RootPanel.get("details").add(spf);
+				RootPanel.get("ItProjektFrame").clear();
+				RootPanel.get("ItProjektFrame").add(spf);
 			}
 		});
 		
 		raumplanButton.addClickHandler(new ClickHandler() {
 			public void onClick(ClickEvent event) {
 				RaumplanForm rpf = new RaumplanForm();
-				RootPanel.get("details").clear();
-				RootPanel.get("details").add(rpf);
+				RootPanel.get("ItProjektFrame").clear();
+				RootPanel.get("ItProjektFrame").add(rpf);
 			}
 		});
-		
-		
-		
+				
 		TreeItem stammdaten = new TreeItem();
 		stammdaten.setText("Stammdaten");
 		stammdaten.addItem(dozentButton);
@@ -131,50 +143,50 @@ public class ItProjekt implements EntryPoint {
 		dozentButton.addClickHandler(new ClickHandler() {
 			public void onClick(ClickEvent event) {
 				DozentForm df = new DozentForm();
-				RootPanel.get("details").clear();
-				RootPanel.get("details").add(df);
+				RootPanel.get("ItProjektFrame").clear();
+				RootPanel.get("ItProjektFrame").add(df);
 			}
 		});
 		
 		zeitslotButton.addClickHandler(new ClickHandler(){
 			public void onClick(ClickEvent event) {
 				ZeitslotForm zf = new ZeitslotForm();
-				RootPanel.get("details").clear();
-				RootPanel.get("details").add(zf);
+				RootPanel.get("ItProjektFrame").clear();
+				RootPanel.get("ItProjektFrame").add(zf);
 			}
 		});
 		
 		raumButton.addClickHandler(new ClickHandler(){
 			public void onClick(ClickEvent event) {
 				RaumForm rf = new RaumForm();
-				RootPanel.get("details").clear();
-				RootPanel.get("details").add(rf);
+				RootPanel.get("ItProjektFrame").clear();
+				RootPanel.get("ItProjektFrame").add(rf);
 			}
 		});
 		
 		studiengangButton.addClickHandler(new ClickHandler(){
 			public void onClick(ClickEvent event) {
-				StundiengangForm sgf = new StudiengangForm();
-				RootPanel.get("details").clear();
-				RootPanel.get("details").add(sgf);
+				StudiengangForm sgf = new StudiengangForm();
+				RootPanel.get("ItProjektFrame").clear();
+				RootPanel.get("ItProjektFrame").add(sgf);
 			}
 		});
 		
 		semesterverbandButton.addClickHandler(new ClickHandler(){
 			public void onClick(ClickEvent event) {
 				SemesterverbandForm svf = new SemesterverbandForm();
-				RootPanel.get("details").clear();
-				RootPanel.get("details").add(svf);
+				RootPanel.get("ItProjektFrame").clear();
+				RootPanel.get("ItProjektFrame").add(svf);
 			}
 		});
 		
-		lehrveranstaltungButton.addClickHandler(new ClickHandler(){
+		/*lehrveranstaltungButton.addClickHandler(new ClickHandler(){
 			public void onClick(ClickEvent event) {
 				LehrveranstaltungForm lf = new LehrveranstaltungForm();
-				RootPanel.get("details").clear();
-				RootPanel.get("details"),add(lf);
+				RootPanel.get("ItProjektFrame").clear();
+				RootPanel.get("ItProjektFrame"),add(lf);
 			}
-		});
+		}); */
 		
 		
 		TreeItem bewegungsdaten = new TreeItem();
@@ -184,18 +196,16 @@ public class ItProjekt implements EntryPoint {
 		stundenplaneintragButton.addClickHandler(new ClickHandler(){
 			public void onClick(ClickEvent event) {
 				StundenplaneintragForm sef = new StundenplaneintragForm();
-				RootPanel.get("details").clear();
-				RootPanel.get("details").add(sef);
+				RootPanel.get("ItProjektFrame").clear();
+				RootPanel.get("ItProjektFrame").add(sef);
 			}
 		});
-		
-		
 		
 		uebersicht.addItem(report);
 		uebersicht.addItem(stammdaten);
 		uebersicht.addItem(bewegungsdaten);
 		
-		RootPanel.get("navigation").add(uebersicht);
+		RootPanel.get("ItProjektFrame").add(uebersicht);
 		
 	}
 }

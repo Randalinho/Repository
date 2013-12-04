@@ -16,7 +16,7 @@ import com.google.gwt.user.client.ui.VerticalPanel;
 import de.hdm.itprojekt.shared.VerwaltungsklasseAsync;
 import de.hdm.itprojekt.shared.bo.*;
 import de.hdm.itprojekt.client.ItProjekt;
-import de.hdm.itprojekt.client.gui.MyDialogBox;
+
 
 
 	/**
@@ -87,7 +87,7 @@ import de.hdm.itprojekt.client.gui.MyDialogBox;
 						  
 						  if (allFilled == true) { 
 						  Zeitslot z = new Zeitslot();
-						  z.setWochentag(tbwochentag);
+						  z.setWochentag(tbwochentag.);
 						  z.setAnfangszeit(tbanfangszeit);
 						  z.setEndzeit(tbendzeit);						  
 						  }
