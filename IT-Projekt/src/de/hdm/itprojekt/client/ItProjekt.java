@@ -20,7 +20,7 @@ import de.hdm.itprojekt.client.gui.*;
 
 
 /**
- * EntryPoint Klasse des Projekts <b>IT-Projekt</b>
+ * EntryPoint Klasse des Projekts <b>ItProjekt</b>
  * Diese Klasse implementiert das Interface <code>EntryPoint</code>
    * daher benötigen wir die Methode <code>public void onModuleLoad()</code>. 
    * Sie ist das GWT-Pendant der <code>main()</code>-Methode normaler Java-Applikationen.
