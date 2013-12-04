@@ -5,6 +5,8 @@
 package de.hdm.itprojekt.client.gui;
 
 import com.google.gwt.event.dom.client.ClickEvent;
+
+
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.Button;
@@ -12,24 +14,22 @@ import com.google.gwt.user.client.ui.Grid;
 import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.TextBox;
-import com.google.gwt.user.client.ui.VerticalPanel;
+import com.google.gwt.user.client.ui.SplitLayoutPanel;
 import com.google.gwt.user.client.ui.FlexTable;
 import com.google.gwt.user.client.ui.Panel;
 
 
 import de.hdm.itprojekt.client.ClientsideSettings;
-import de.hdm.itprojekt.client.gui.UebersichtTreeViewModel;
 import de.hdm.itprojekt.shared.VerwaltungsklasseAsync;
 import de.hdm.itprojekt.shared.bo.Dozent;
 import de.hdm.itprojekt.shared.Verwaltungsklasse;
 
 
-//Test
 /**
  * @author Thies, Hofmann
  *
  */
-public class DozentForm extends HorizontalPanel{
+public class DozentForm extends SplitLayoutPanel{
 
 	/**
 	 * Aufbau der Seite, um den Dozent anzuzeigen, zu löschen und zu bearbeiten
@@ -48,22 +48,22 @@ public class DozentForm extends HorizontalPanel{
 	public DozentForm() {
 		//FlexTable tabelleDozent = new FlexTable();
 		
-		Button loeschen = new Button("Löschen");
-		loeschen.addClickHandler(new ClickHandler() {
+		Button deleteDozentButton = new Button("Dozent löschen");
+		deleteDozentButton.addClickHandler(new ClickHandler() {
 			public void onClick(ClickEvent event) {
 				verwaltungsklasse.deleteDozent(shownDozent, new deleteDozentCallback(shownDozent));
 				}
 			});
 		
-		Button bearbeiten = new Button("Bearbeiten");
-		bearbeiten.addClickHandler(new ClickHandler() {
+		Button changeDozentButton = new Button("Dozent bearbeiten");
+		changeDozentButton.addClickHandler(new ClickHandler() {
 			public void onClick(ClickEvent event) {
 				changeSelectedDozent(); 
 				}
 			});
 		
-		Button neuAnlegen = new Button ("neuen Dozent anlegen");
-		neuAnlegen.addClickHandler(new ClickHandler() {
+		Button createDozentButton = new Button ("Dozent anlegen");
+		createDozentButton.addClickHandler(new ClickHandler() {
 			public void onClick(ClickEvent event) {
 				String vorname = vornameTextBox.getText();
 				String nachname = nachnameTextBox.getText();
@@ -73,8 +73,8 @@ public class DozentForm extends HorizontalPanel{
 		
 		tabelleDozent.setText(0, 0, "nachname");
 		tabelleDozent.setText(0, 1, "vorname");
-		tabelleDozent.setWidget(1, 2, loeschen);
-		tabelleDozent.setWidget(1, 2, bearbeiten);
+		tabelleDozent.setWidget(1, 2, deleteDozentButton);
+		tabelleDozent.setWidget(1, 2, changeDozentButton);
 		tabelleDozent.setWidget(1, 1, nachnameTextBox);
 		tabelleDozent.setWidget(1, 2, vornameTextBox);
 				
@@ -123,7 +123,7 @@ public class DozentForm extends HorizontalPanel{
 		public void onSuccess(Dozent result) {
 			if (dozent != null) {
 				setSelected(null);
-				catvm.removeDozent(dozent);
+			;
 			}
 		}
 	}
@@ -140,9 +140,9 @@ public class DozentForm extends HorizontalPanel{
 		public void onSuccess(Dozent dozent) {
 			if (dozent != null) {
 				ClientsideSettings.getLogger().info(
-						"Kunde mit " + dozent.getVorname() + " "
+						"Der Dozent " + dozent.getVorname() + " "
 								+ dozent.getNachname() + " wurde angelegt.");
-				tabelleDozent.addDozent(dozent);
+				tabelleDozent.addCell(1);
 			}
 		}
 	}
@@ -158,7 +158,7 @@ public class DozentForm extends HorizontalPanel{
 				}
 				@Override
 				public void onSuccess(Dozent result){		
-					tabelleDozent.updateCell(shownDozent);
+					Dozent.
 				}
 			});
 		}
@@ -166,3 +166,4 @@ public class DozentForm extends HorizontalPanel{
 	
 	
 }
+
