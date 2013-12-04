@@ -41,7 +41,7 @@ public class ItProjekt implements EntryPoint {
 	     * Daher bietet sich ein SplitLayoutPanel als Container an.
 	     *
 	     */
-		
+		/**		
 		RootLayoutPanel rlp = RootLayoutPanel.get();
 		SplitLayoutPanel mainPanel = new SplitLayoutPanel();
 		rlp.add(mainPanel);
@@ -55,15 +55,15 @@ public class ItProjekt implements EntryPoint {
 		mainPanel.addEast(new HTML ("detailsPanel"), 350);
 		
 		RootPanel.get("ItProjektFrame").add(rlp);
-	
-	/**
-	 * 	SplitLayoutPanel s = new SplitLayoutPanel();
-	 *	s.addWest (new HTML ("navigation"), 130);
-	 *	SplitLayoutPanel p = new SplitLayoutPanel();
-	 *	p.addEast (new HTML("content"), 380);
-	 *	RootPanel.get("details").add(s);
-	    RootPanel.get("details").add(p);
-		 */
+			 */
+
+	  	SplitLayoutPanel s = new SplitLayoutPanel();
+	 	s.addWest (new HTML ("navigation"), 130);
+	 	SplitLayoutPanel p = new SplitLayoutPanel();
+	 	p.addEast (new HTML("detailsPanel"), 380);
+	 	RootPanel.get("ItProjektFrame").add(s);
+	    RootPanel.get("ItProjektFrame").add(p);
+
 
 	    /*
 	     * Das SplitLayoutPanel wird einem DIV-Element namens "Details" in der
