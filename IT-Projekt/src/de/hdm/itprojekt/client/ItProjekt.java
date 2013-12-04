@@ -51,8 +51,8 @@ public class ItProjekt implements EntryPoint {
 		ScrollPanel navigation = new ScrollPanel(new Tree());
 		navigation.setHeight("300px");
 		
-		mainPanel.addWest(navigation, 150);
-		mainPanel.addEast(detailsPanel, 350);
+		mainPanel.addWest(new HTML ("navigation"), 150);
+		mainPanel.addEast(new HTML ("detailsPanel"), 350);
 		
 		RootPanel.get("ItProjektFrame").add(rlp);
 	
