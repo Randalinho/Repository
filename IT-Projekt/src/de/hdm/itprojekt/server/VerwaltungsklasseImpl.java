@@ -19,6 +19,10 @@ implements Verwaltungsklasse {
 	 */
 	private static final long serialVersionUID = 7027992284251455305L;
 
+	public VerwaltungsklasseImpl() throws IllegalArgumentException {
+		
+	  }
+	
 	public Vector<Dozent> getStundenplaneintragOf(Dozent d)
 		      throws IllegalArgumentException {
 		 	//return this.DozentenMapper.findByKey(d.getId());
