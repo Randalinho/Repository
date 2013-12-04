@@ -21,7 +21,10 @@ public class Zeitslot extends BusinessObjekt {
 	 */
 	private Date endzeit;
 	
-	public Zeitslot(){
+	public Zeitslot(Date wochentag, Date anfangszeit, Date endzeit){
+		this.wochentag = wochentag;
+		this.anfangszeit = anfangszeit;
+		this.endzeit = endzeit;
 	}
 
 	public Date getWochentag() {
@@ -48,6 +51,7 @@ public class Zeitslot extends BusinessObjekt {
 		this.endzeit = endzeit;
 	}
 	
+	Zeitslot zeitslot1 = new Zeitslot();
 	
 }
 
